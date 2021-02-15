@@ -28,13 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   {
     $validatemail ="your name is ".$email;
   }
-  if (empty($password) || strlen($password)<8 || preg_match("/^([(@, #, $, %]) $/ix",$password)
+  if (empty($password) || strlen($password)<8 || preg_match("/(?=.*[@#$%^&+=]).*$/",$password)
    {
-    $validatepass ="you must enter your email";
+    $validatepassword ="you must enter your password";
    } 
   else
   {
-    $validatemail ="your name is ".$email;
+    $validatepassword = $password;
   }
 
   if (!isset($_REQUEST["vehicle1"]) && !isset($_REQUEST["vehicle2"]) && !isset($_REQUEST["vehicle3"]))
