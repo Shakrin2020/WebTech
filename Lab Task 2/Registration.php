@@ -2,6 +2,7 @@
 $validatename ="";
 $validateemail ="";
 $validatepassword ="";
+$validatecpassword ="";
 $validatecheckbox = "";
 $validateradio ="";
 $validategender ="";
@@ -11,6 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 {
     $name = $_REQUEST ["fname"];
     $email = $_REQUEST ["email"];
+    $password = $_REQUEST["password"];
+    $cpassword = $_REQUEST["cpassword"];
 
    if (empty($name) || strlen($name) < 5)
   {
@@ -30,12 +33,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
   }
   if (empty($password) || strlen($password)<8 || preg_match("/(?=.*[@#$%^&+=]).*$/",$password)
    {
-    $validatepassword ="you must enter your password";
+    $validatepassword ="you must enter valid password";
    } 
   else
   {
     $validatepassword = $password;
   }
+  if (empty($cpassword) || $password != $cpassword)
+   {
+    $validatecpassword ="you must enter valid password";
+   } 
+  else
+  {
+    $validatecpassword = $cpassword;
+  }
+
 
   if (!isset($_REQUEST["vehicle1"]) && !isset($_REQUEST["vehicle2"]) && !isset($_REQUEST["vehicle3"]))
   {
