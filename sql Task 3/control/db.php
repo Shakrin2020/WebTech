@@ -19,7 +19,7 @@ $result = $conn->query("SELECT * FROM ". $table." WHERE username='". $username."
 
  function RegUser($conn,$table,$userName,$email,$username,$password,$gender,$dob){
     $sql="INSERT INTO registration(fullname, email, username, pass, gender, dob)
-    VALUES ('$fullname','$email','$userName','$password','$gender','$dob')";    
+    VALUES ('$username','$email','$userName','$password','$gender','$dob')";    
     $res = $conn->query($sql);
     if($res){
         echo "new record inserted";
