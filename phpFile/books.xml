@@ -1,0 +1,12 @@
+<?php
+$simplexml = new simpleXML Element ('<?xml version = "1.0"?> <books/>' );
+$book1 = $simple->addChild('book');
+$book1 = addChild("Booktitle", "The wandering oz");
+$book1 = addChild("PublicationDate", 2007);
+
+$book2 = $simple->addChild('book');
+$book2 = addChild("Booktitle", "The roaming fox");
+$book2 = addChild("PublicationDate", 2009);
+
+file_put_contents('books.xml', $simplexml->asXML());
+?>

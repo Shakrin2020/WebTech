@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 <body>
 <h1> REGISTRATION </h1>
 
-<form action= "<?php echo $_SERVER["PHP_SELF"];?>" method="post" >
+<form action= "<?php echo $_SERVER["PHP_SELF"] ?>" method="post"  >
 <table>
 <tr>
 <td> Name:</td>
