@@ -124,7 +124,7 @@ other <?php echo $validategender;?></td>
 </table>
 
 
-<input type = "checkbox" id = "vehicle1" name = "vehicle1" value  = "Bike">
+<input type = "checkbox" id = "vehicle1" name = "vehicle1" value  = "Bike"> 
 I have a bike <br>
 <input type = "checkbox" id = "vehicle2" name = "vehicle2" value  = "Car">
 I have a car <br>
